@@ -1,6 +1,10 @@
 import { PrismaClient } from "@prisma/client";
 import fs from "fs";
 import path from "path";
+import { env } from "prisma/config";
+import { PrismaPg } from "@prisma/adapter-pg";
+
+
 const prisma = new PrismaClient();
 
 async function deleteAllData(orderedFileNames: string[]) {
